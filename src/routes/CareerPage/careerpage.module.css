@@ -1,0 +1,94 @@
+.container {
+  background: url(../../assets/thaikkudam.jpg);
+  background-size: cover;
+  color:white
+}
+
+.contact-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: cornsilk;
+  text-align: center;
+  padding-top: 3%;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 25px;
+}
+.name,
+.email,
+.number,
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-box h2 {
+  font-size: 4rem;
+font-family: 'Lobster', cursive;
+margin-bottom: 2rem;
+}
+
+.button,
+.contact {
+  margin: 2% 0;
+}
+.contact input {
+    margin: 10px;
+  }
+
+  .contact-info {
+    width: 60%;
+
+  }
+.contact-info * {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.contact-info a {
+  color: cyan;
+}
+.submitButton {
+  padding: 5px;
+}
+.regForm{
+  border-width: 2px;
+  border-style: groove;
+  border-color: white;
+  border-image: initial;
+}
+
+.controlMargin{
+    margin: 15px 30px;
+}
+
+.contact-form-parent{
+    width: 60%;
+    margin: 2rem 0 3rem 0;
+    font-size: 1.3rem;
+}
+
+label{
+  text-align: left;
+}
+
+.profile {
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .contact-form-parent{
+    width: 90%;
+}
+  .contact-info {
+    width: 90%;
+
+  }
+
+}

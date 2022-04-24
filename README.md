@@ -1,1 +1,0 @@
-# thaikoodam_bridge_frontend
