@@ -1,6 +1,6 @@
 import { useParams,NavLink,Outlet } from 'react-router-dom'
 import axios from "axios";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 const MoreInfo = () => {
   const params = useParams()
   //let member = getMusician(parseInt(params.musicianId, 10));
@@ -16,11 +16,14 @@ const MoreInfo = () => {
       console.log("error", error);
     }
   }
-  fetchMoreInfo()
+  useEffect(() => {
+   fetchMoreInfo()
+  }, [])
+
     return (
       <main style={{ padding: "1rem" }}>
         <h2>More Info</h2>
-        <p>{moreInfo.moreInfo}</p>
+        <p>{moreInfo.moreInfo?moreInfo.moreInfo:`I am a ${moreInfo.profile}`}</p>
         <NavLink
           to={`/profiles/${moreInfo._id}/${moreInfo._id}/${moreInfo._id}`}
         >

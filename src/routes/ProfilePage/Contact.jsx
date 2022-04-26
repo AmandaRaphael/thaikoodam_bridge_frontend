@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useParams} from "react-router-dom";
 import axios from "axios";
 
@@ -8,25 +8,32 @@ const Contact = () => {
   const params = useParams();
   const [contact, setContact] = useState("");
 
-  const fetchContact= async () => {
+  const fetchContact = async () => {
+    setContact("")
     try {
       const result = await axios.get(
         `http://localhost:3001/profiles/${params.musician}/${params.musicianId}/${params.musicianNum}`
       );
       setContact(result.data);
+      //console.log("contact",result.data)
     } catch (error) {
       console.log("error", error);
     }
   };
-  
-  fetchContact();
+  useEffect(() => {
+   fetchContact();
+   
+  }, [])
+
 
  
     return (
       <div>
         <h2>Contact</h2>
-            <p>Phone:{contact.phone}</p>
-            <p>Email:{contact.name}@gmail.com</p>
+        <p>Phone:{contact.phone}</p>
+        <p>
+          Email:{contact.email ? contact.email : `${contact.name}@gmail.com`}
+        </p>
       </div>
     );
 }

@@ -31,66 +31,7 @@ function ContactUs() {
 							</p> */}
 						</div>
 
-						<div className="contact-form-parent">
-							<form>
-								<fieldset className="contact-form">
-									{/* <legend>Contact Us</legend> */}
-									<div className="name control-margin">
-										<label for="first_name">
-											Your Name:<span>*</span>
-										</label>
-										<input
-											type="text"
-											q
-											name="firstName"
-											id="first_name"
-											required
-										/>
-									</div>
-									<div className="email control-margin">
-										<label for="Email">
-											Email:<span>*</span>
-										</label>
-										<input
-											type="email"
-											name="email"
-											id="Email"
-											placeholder="smithbob@gmail.com"
-											required
-										/>
-									</div>
-									<div className="number control-margin">
-										<label for="phone">Phone Number:(optional)</label>
-										<input type="number" name="phn" id="phone" />
-									</div>
-									<div className="message control-margin">
-										<label for="message">Your Message:</label>
-										<textarea
-											name="msg"
-											id="message"
-											min="5"
-											max="150"
-											rows="3"
-											cols="62"
-										></textarea>
-									</div>
-									<div class="contact">
-										<label for="contact">
-											How do you like to be contacted?
-										</label>
-										<br></br>
-										<label for="contactP">phone</label>
-										<input type="radio" name="Contact" id="contactP" />
-
-										<label for="contactE">email</label>
-										<input type="radio" name="Contact" id="contactE" />
-									</div>
-									<div class="button">
-										<input type="submit" className="submitButton" />
-									</div>
-								</fieldset>
-							</form>
-						</div>
+						
 					</div>
 				</div>
 			</div>
