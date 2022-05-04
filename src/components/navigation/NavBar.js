@@ -57,6 +57,19 @@ const NavBar = () => {
         >
           Career
         </NavLink>
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              display: "block",
+              margin: "1rem 0",
+              color: isActive ? "orange" : "white",
+              textDecoration: "none",
+            };
+          }}
+          to="/signIn"
+        >
+          signIn
+        </NavLink>
       </>
     );
 }
