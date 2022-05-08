@@ -11,6 +11,7 @@ const Contact = () => {
   const fetchContact = async () => {
     setContact("")
     try {
+      setContact("")
       const result = await axios.get(
                 `https://thaikoodam-bridge-backend.herokuapp.com/profiles/${params.musician}/${params.musicianId}/${params.musicianNum}`
       );
