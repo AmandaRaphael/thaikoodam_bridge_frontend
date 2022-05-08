@@ -25,7 +25,7 @@ const Musicians = () => {
 
   
   return (
-    <main style={{ padding: "1rem", display: "flex" }}>
+    <main style={{ padding: ".5rem"}}>
       {musician && (
         <div>
           {" "}

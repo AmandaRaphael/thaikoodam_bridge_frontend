@@ -35,7 +35,7 @@ const Profiles = () => {
   return (
     <div
       className="profileDiv fontSize"
-      style={{ backgroundImage: `url(${whitebg})` }}
+      style={{ backgroundImage: `url(${whitebg})`,width:"100vw" }}
     >
    <LogoLink/>
     

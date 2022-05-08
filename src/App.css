@@ -1,4 +1,8 @@
 /* HomePage */
+.home{
+  background-image: url("./assets/thaikkudam.jpg");
+   width: 100vw;
+}
 .homeNav {
   display: flex;
   justify-content: space-evenly;
@@ -55,4 +59,33 @@ h2{
 .fontSize{
   font-size: 20px;
   font-weight: bold;
+}
+
+@media  only screen and (max-width:768px) {
+  
+  .homeNav{
+    flex-direction: column;
+  text-align: center;
+    padding-left: 2%;
+  }
+  .homeNav h1{
+    font-size: 15px;
+  }
+  /* About */
+  .about{
+    flex-direction: column;
+  }
+  .aboutMain{
+    font-size: small;
+  }
+  /* profile */
+  .profileDiv{
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .fontSize{
+    font-size: 14px;
+  }
 }

@@ -4,10 +4,9 @@ import NavBar from "../components/navigation/NavBar";
 const HomePage = () => {
 
   return (
-    <main
+    <main className="home"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
-        width: "100vw",
+       
         height: "100vh",
       }}
     >

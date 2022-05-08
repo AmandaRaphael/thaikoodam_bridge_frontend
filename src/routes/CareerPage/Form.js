@@ -15,12 +15,15 @@ const Form = () => {
          "Successfully submitted your application!Check profiles Page to see your profile."
        );
        try {
-         axios.post(`http://localhost:3001/profiles/career/members`, {
-           name: fullName,
-           email,
-           phone,
-           profile,
-         });
+         axios.post(
+           `https://thaikoodam-bridge-backend.herokuapp.com/profiles/career/members`,
+           {
+             name: fullName,
+             email,
+             phone,
+             profile,
+           }
+         );
        } catch (error) {
          console.log("error", error);
        }
@@ -90,8 +93,7 @@ const Form = () => {
               id="message"
               min="5"
               max="150"
-              rows="3"
-              cols="62"
+              
             ></textarea>
           </div>
           {/* <div className={style.profile}>

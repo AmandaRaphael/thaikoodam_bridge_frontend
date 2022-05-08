@@ -21,7 +21,7 @@ const MoreInfo = () => {
   }, [])
 
     return (
-      <main style={{ padding: "1rem" }}>
+      <main >
         <h2>More Info</h2>
         <p>{moreInfo.moreInfo?moreInfo.moreInfo:`I am a ${moreInfo.profile}`}</p>
         <NavLink
