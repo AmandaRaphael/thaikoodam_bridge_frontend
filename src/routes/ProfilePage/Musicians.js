@@ -1,6 +1,6 @@
 import {  NavLink, Outlet,useParams } from "react-router-dom";
 import axios from "axios"
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 const Musicians = () => {
 
   let params = useParams();
@@ -19,7 +19,10 @@ const Musicians = () => {
       
     }
   }
-  fetchMusician()
+  useEffect(() => {
+   fetchMusician();
+  }, [])
+
   
   return (
     <main style={{ padding: "1rem", display: "flex" }}>
