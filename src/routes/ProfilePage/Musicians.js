@@ -9,7 +9,9 @@ const Musicians = () => {
   
   const fetchMusician = async () => {
     try {
-      const result = await axios.get(`http://localhost:3001/profiles/${params.musician}`);
+      const result = await axios.get(
+        `https://thaikoodam-bridge-backend.herokuapp.com/profiles/${params.musician}`
+      );
       setMusician(result.data)
       
     } catch (error) {

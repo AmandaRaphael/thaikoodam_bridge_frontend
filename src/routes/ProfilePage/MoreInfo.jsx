@@ -9,7 +9,7 @@ const MoreInfo = () => {
     
     try {
       const result = await axios.get(
-        `http://localhost:3001/profiles/${params.musician}/${params.musicianId}`
+        `https://thaikoodam-bridge-backend.herokuapp.com/profiles/${params.musician}/${params.musicianId}`
       );
       setMoreInfo(result.data);
     } catch (error) {
