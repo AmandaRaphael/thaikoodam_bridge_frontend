@@ -12,7 +12,9 @@ const Profiles = () => {
   
   const fetchMembers = async () => {
     try {
-      const result = await axios.get(`http://localhost:3001/profiles/members`)
+      const result = await axios.get(
+        `https://thaikoodam-bridge-backend.herokuapp.com/profiles/members`
+      );
       setMembers(result.data)
    
       
@@ -46,7 +48,7 @@ const Profiles = () => {
               let filter = event.target.value;
               if (filter) {
                 setSearchParams({ filter });
-              } else {
+              } else {git push heroku main
                 setSearchParams({});
               }
             }}
