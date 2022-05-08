@@ -12,7 +12,7 @@ const Contact = () => {
     setContact("")
     try {
       const result = await axios.get(
-        `https://thaikoodam-bridge-backend.herokuapp.com/profiles/${params.musician}/${params.musicianId}/${params.musicianNum}`
+                `https://thaikoodam-bridge-backend.herokuapp.com/profiles/${params.musician}/${params.musicianId}/${params.musicianNum}`
       );
       setContact(result.data);
       console.log("contact",result.data)
