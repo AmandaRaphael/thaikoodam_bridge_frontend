@@ -48,7 +48,7 @@ const Profiles = () => {
               let filter = event.target.value;
               if (filter) {
                 setSearchParams({ filter });
-              } else {git push heroku main
+              } else {
                 setSearchParams({});
               }
             }}
