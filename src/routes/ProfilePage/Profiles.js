@@ -12,6 +12,7 @@ const Profiles = () => {
   
   const fetchMembers = async () => {
     try {
+      setMembers("")
       const result = await axios.get(
         `https://thaikoodam-bridge-backend.herokuapp.com/profiles/members`
       );

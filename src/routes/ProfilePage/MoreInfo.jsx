@@ -8,6 +8,7 @@ const MoreInfo = () => {
   const fetchMoreInfo = async () => {
     
     try {
+      setMoreInfo("")
       const result = await axios.get(
         `https://thaikoodam-bridge-backend.herokuapp.com/profiles/${params.musician}/${params.musicianId}`
       );

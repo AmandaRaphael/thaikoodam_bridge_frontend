@@ -1,6 +1,7 @@
 import backgroundImage from "../assets/thaikkudam.jpg";
 import LogoLink from "../components/navigation/LogoLink";
 import NavBar from "../components/navigation/NavBar";
+import {  Outlet } from "react-router-dom";
 const HomePage = () => {
 
   return (
@@ -19,7 +20,7 @@ const HomePage = () => {
         </main>
         <NavBar/>
       </nav>
-      {/* <Outlet /> */}
+      <Outlet />
     </main>
   );
 };

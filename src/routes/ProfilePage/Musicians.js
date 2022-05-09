@@ -21,7 +21,7 @@ const Musicians = () => {
   }
   useEffect(() => {
    fetchMusician();
-  }, [])
+  }, [params.musician])
 
   
   return (
