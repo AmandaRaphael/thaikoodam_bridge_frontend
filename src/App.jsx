@@ -9,6 +9,7 @@ import Contact from "./routes/ProfilePage/Contact";
 import "./App.css";
 import CareerPage from "./routes/CareerPage/CareerPage";
 import SignInForm from "./routes/signInPage/SignInForm";
+import Register from "./routes/signInPage/Register";
 const App = () => {
   return (
     <main>
@@ -31,7 +32,8 @@ const App = () => {
           </Route>
         </Route>
         <Route path="career" element={<CareerPage />} />
-        <Route path="signIn" element={<SignInForm />} />
+        <Route path="signIn" element={<SignInForm />}/>
+        <Route path="signUp" element={<Register />} />
 
         <Route path="*" element={<Home />} />
       </Routes>
