@@ -17,7 +17,7 @@ export default function Login() {
     console.log("data login", data);
 
     try {
-      const result = await axios.get(
+      const result = await axios.post(
         "https://thaikoodam-bridge-backend.herokuapp.com/user/login",
         data
       );
