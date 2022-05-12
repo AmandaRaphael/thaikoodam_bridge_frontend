@@ -106,7 +106,7 @@ const [imageUploaded, setImageUploaded] = useState(null);
         />
         {imageUploaded && (
           <img
-            src={imageUploaded}
+            src={process.env.PUBLIC_URL+imageUploaded}
             alt="pic"
             width="50px"
             height="50px"
