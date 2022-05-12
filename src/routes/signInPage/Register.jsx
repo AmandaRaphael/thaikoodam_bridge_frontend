@@ -104,7 +104,15 @@ const [imageUploaded, setImageUploaded] = useState(null);
           label="userphoto"
           required={true}
         />
-        {imageUploaded && <img src={imageUploaded} alt="pic" width="50px" height="50px"/>}
+        {imageUploaded && (
+          <img
+            src={imageUploaded}
+            alt="pic"
+            width="50px"
+            height="50px"
+            multiple={false}
+          />
+        )}
         <Button type="submit" variant="contained">
           Submit
         </Button>
