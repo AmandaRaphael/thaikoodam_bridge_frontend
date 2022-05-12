@@ -7,7 +7,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Register() {
-
+const [imageUploaded, setImageUploaded] = useState(null);
   const [username, setUsername] = useState("");
   const [data, setData] = useState({});
 
@@ -22,15 +22,17 @@ export default function Register() {
       lastname: formData.get("lastname"),
       email: formData.get("email"),
       password: formData.get("password"),
+      image:formData.get("image")
     };
     console.log("data", data);
     setData(data);
     setUsername(data.username);
     try {
-      await axios.post(
+     const res= await axios.post(
         "https://thaikoodam-bridge-backend.herokuapp.com/user/register",
         data
       );
+      setImageUploaded(res.data.file.fileURL);
       alert(
         "Successfully registered"
       );
@@ -95,6 +97,14 @@ export default function Register() {
           label="Password"
           required={true}
         />
+        <input
+          id="photo"
+          name="image"
+          type="file"
+          label="userphoto"
+          required={true}
+        />
+        {imageUploaded && <img src={imageUploaded} alt="pic" width="50px" height="50px"/>}
         <Button type="submit" variant="contained">
           Submit
         </Button>
